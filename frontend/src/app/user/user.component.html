@@ -1,0 +1,20 @@
+<div class="user-home-container">
+  <div class="home-tab">
+    <mat-toolbar>
+      <label class="title"> MyGPA </label>
+    </mat-toolbar>
+  </div>
+
+  <div class="home-page">
+    <div class="home-page-title">
+      <label> Welcome, {{username}} </label>
+    </div>
+    <div class="home-page-subjects">
+      <mat-grid-list cols="2" rowHeight="2:1" class="subject-button" *ngFor="let subject of subjects">
+        <mat-grid-tile class="clickButton" (click)="onClick($event)" matRipple>
+          <label class="subject-label"> {{subject}} </label>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+</div>
